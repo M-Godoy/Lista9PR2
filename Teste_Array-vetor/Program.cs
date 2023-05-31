@@ -51,56 +51,52 @@ namespace Teste_Array_vetor
         }
             public static void exercício1()
             {
-            double result, soma = 0;
-            int q = 0, w = 0;
+            int[] vet2;
+            float soma = 0, div;
+            Console.WriteLine("Entre com o tamanho: ");
+            int t = int.Parse(Console.ReadLine());
 
-            int[] vet4;
-            Console.WriteLine("entre com um tamanho:");
-            q = int.Parse(Console.ReadLine());
+            vet2 = new int[t];
+            Random rand = new Random();
 
-            vet4 = new int[q];
-
-            Random rande = new Random(); //criação de números aleatórios
-
-            for (; w < q; w++)
+            for (int i = 0; i < t; i++)
             {
-                vet[w] = rande.Next(10, 100); // números aleatórios de 10 á 50
-                soma += vet4[w];
+                vet2[i] = rand.Next(10, 50);// rand.Next() cria números aleatório
+                soma += vet2[i];
             }
-            for (w = 0; w < q; w++)
+            for (int i = 0; i < t; i++)
             {
-                Console.WriteLine("posição [" + (w + 1) + "]" + vet4[w]);
+                Console.WriteLine("Põsição[{0}] = {1}", i, vet2[i]);
             }
+            div = soma / t;
+            Console.WriteLine("A média é: " + div);
 
-
-            result = soma / q;
-
-            Console.WriteLine("A média será: " + result);
-            Console.ReadKey();
         }
             public static void exercício2()
             {
             int[] vet2;
-            Console.WriteLine("entre com um tamanho:");
-            int i = int.Parse(Console.ReadLine());
+            float soma = 0, div;
+            Console.WriteLine("Entre com o tamanho: ");
+            int t = int.Parse(Console.ReadLine());
 
-            vet2 = new int[i];
+            vet2 = new int[t];
+            Random rand = new Random();
 
-            for (int t = 0; t < i; t++)
+            for (int i = 0; i < t; i++)
             {
-                Console.WriteLine("Digite o valor p/ posição [" + (t + 1) + "]");
-                vet2[t] = int.Parse(Console.ReadLine());
-                for (vet2[] % 2 == 0) ;
-                    //desisto!!!
+                vet2[i] = rand.Next(10, 50);// rand.Next() cria números aleatório
+                soma += vet2[i];
             }
-            for (int t = 0; t < i; t++)
+            for (int i = 0; i < t; i++)
             {
-                Console.WriteLine("posição [" + (t + 1) + "]" + vet2[t]);
+                Console.WriteLine("Põsição[{0}] = {1}", i, vet2[i]);
             }
-            Console.ReadKey();
+            div = soma / t;
+            Console.WriteLine("A média é: " + div);
+
         }
 
-            static void Main(string[] args)
+        static void Main(string[] args)
         {
             //declaração 
             int[] vet = new int[6]; //vet [0,1,2,3,4,5]
