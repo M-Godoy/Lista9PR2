@@ -90,7 +90,7 @@ namespace Teste_Array_vetor
             {
                 Console.WriteLine("Digite o valor p/ posição [" + (t + 1) + "]");
                 vet2[t] = int.Parse(Console.ReadLine());
-                for (vet2[] %2==0)
+                for (vet2[] % 2 == 0) ;
                     //desisto!!!
             }
             for (int t = 0; t < i; t++)
