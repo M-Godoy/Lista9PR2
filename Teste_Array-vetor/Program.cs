@@ -12,6 +12,7 @@ namespace Teste_Array_vetor
     {
             public static void exemplo1() 
             {
+            Console.WriteLine("exemplo 1 : mostrar valores do vetor dados pelo usuário");
             int[] vet2;
             Console.WriteLine("entre com um tamanho:");
             int i = int.Parse(Console.ReadLine());
@@ -28,9 +29,8 @@ namespace Teste_Array_vetor
                 Console.WriteLine("posição [" + (t + 1) + "]" + vet2[t]);
             }
             Console.ReadKey();
-        }
-            public static void exemplo2() 
-            {
+
+            Console.WriteLine("exemplo 2 : mostrar valores do vetor dados de forma aleatória ");
             int[] vet3;
             Console.WriteLine("entre com um tamanho:");
             int r = int.Parse(Console.ReadLine());
@@ -49,7 +49,7 @@ namespace Teste_Array_vetor
             }
             Console.ReadKey();
         }
-            public static void exercício1()
+            public static void exercício1() 
             {
             int[] vet2;
             float soma = 0, div;
@@ -70,12 +70,12 @@ namespace Teste_Array_vetor
             }
             div = soma / t;
             Console.WriteLine("A média é: " + div);
-
-        }
+            }
             public static void exercício2()
             {
             int[] vet2;
-            float soma = 0, div;
+            double sp = 0, si = 0;
+
             Console.WriteLine("Entre com o tamanho: ");
             int t = int.Parse(Console.ReadLine());
 
@@ -85,16 +85,37 @@ namespace Teste_Array_vetor
             for (int i = 0; i < t; i++)
             {
                 vet2[i] = rand.Next(10, 50);// rand.Next() cria números aleatório
-                soma += vet2[i];
+
+                if (vet2[i] % 2 == 0)
+                {
+                    sp += vet2[i];
+                }
+                else
+                {
+                    si += vet2[i];
+                }
+                Console.ReadKey();
             }
             for (int i = 0; i < t; i++)
             {
                 Console.WriteLine("Põsição[{0}] = {1}", i, vet2[i]);
-            }
-            div = soma / t;
-            Console.WriteLine("A média é: " + div);
 
-        }
+                Console.ReadKey();
+            }
+            Console.WriteLine("A soma das números pares é: " + sp);
+            Console.WriteLine("A soma das números ímpares é: " + si);
+
+            Console.ReadKey();
+
+            }
+            public static void exercício3()
+            {
+            
+            }
+            public static void exercício4()
+            {
+            
+            }
 
         static void Main(string[] args)
         {
@@ -108,31 +129,49 @@ namespace Teste_Array_vetor
             int opcao; 
 
             Console.WriteLine("___Menu___");
+            Console.WriteLine("Exemplo 1 - digite 0");
             Console.WriteLine("Exercício 1 - digite 1");
-            Console.WriteLine("Exercício 2 - digite 2");
+            Console.WriteLine("Exercício 2 - digite 2"); 
             Console.WriteLine("Exercício 3 - digite 3");
+            Console.WriteLine("Exercício 4 - digite 4");
 
             opcao = int.Parse(Console.ReadLine());
 
             switch (opcao) 
             {
-                case 1:
-                    //atribuição de valores para cada índice, exemplo 2 + laços de repetição (Exercício 1)
-                    //Console.WriteLine("Exemplo 2");
+                case 0:
+                    //atribuição de valores para cada índice, exemplo 1 e 2 + laços de repetição 
                     exemplo1();                   
                     break;
-                case 2:
-                    //atribuição de valores para cada índice, exemplo 3 + laços de repetição (Exercício 2)
-                    //Console.WriteLine("Exemplo 3");
-                    exemplo2();
-                    break; 
-                case 3:
-                    // Exercício 1
+                case 1:
+                    //exercício 1
                     exercício1();
-                    break;
-                case 4:
+                    break; 
+                case 2:
                     // Exercício 2
                     exercício2();
+                    break;
+                case 3:
+                    // Exercício 3
+                    exercício3();
+                    break;
+                case 4:
+                    // Exercício 4
+                    exercício4();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     break;
             }
 
